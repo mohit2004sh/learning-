@@ -1,0 +1,164 @@
+/* Global Styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    background-color: #f0f4f8;
+    color: #333;
+}
+
+/* Header Styling */
+header {
+    background-color: #3b5998;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+header h1 {
+    font-size: 36px;
+    margin-bottom: 10px;
+    letter-spacing: 1.5px;
+}
+
+header p {
+    font-size: 18px;
+    letter-spacing: 1px;
+}
+
+/* Main Content Styling */
+main {
+    padding: 40px;
+}
+
+/* Year Section Styling */
+.year-section {
+    margin-bottom: 40px;
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+    animation: slideIn 0.5s ease-in-out;
+    transition: transform 0.3s ease;
+}
+
+.year-section:hover {
+    transform: translateY(-10px);
+}
+
+.year-section h2 {
+    font-size: 28px;
+    color: #3b5998;
+    margin-bottom: 20px;
+    border-bottom: 3px solid #3b5998;
+    padding-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Subject Section Styling */
+.subject h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #444;
+}
+
+.subject ul {
+    list-style-type: none;
+    padding-left: 20px;
+}
+
+.subject ul li {
+    margin-bottom: 8px;
+}
+
+.subject ul li a {
+    text-decoration: none;
+    color: #3b5998;
+    font-size: 18px;
+    transition: color 0.3s ease;
+    position: relative;
+    padding-left: 15px;
+}
+
+.subject ul li a:hover {
+    color: #f39c12;
+}
+
+.subject ul li a::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    font-size: 24px;
+    color: #3b5998;
+    transition: color 0.3s ease;
+}
+
+.subject ul li a:hover::before {
+    color: #f39c12;
+}
+
+/* Footer Styling */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #3b5998;
+    color: white;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    font-size: 16px;
+    letter-spacing: 1px;
+}
+
+/* Animations */
+@keyframes slideIn {
+    from {
+        transform: translateY(50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Media Queries for Responsive Design */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 28px;
+    }
+
+    header p {
+        font-size: 16px;
+    }
+
+    main {
+        padding: 20px;
+    }
+
+    .year-section h2 {
+        font-size: 24px;
+    }
+
+    .subject h3 {
+        font-size: 20px;
+    }
+
+    .subject ul li a {
+        font-size: 16px;
+    }
+
+    footer {
+        font-size: 14px;
+    }
+}
